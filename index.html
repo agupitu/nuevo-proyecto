@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerras de Carriles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui-layer">
+            <div id="resource-panel">
+                <span id="gold-display">Oro: 0</span>
+            </div>
+            <div id="build-menu" class="hidden">
+                <h3>Construir</h3>
+                <button id="btn-tower" class="build-btn" data-type="tower">
+                    <span class="icon">♜</span> Torre (50g)
+                </button>
+                <button id="btn-farm" class="build-btn" data-type="farm">
+                    <span class="icon">💰</span> Granja (100g)
+                </button>
+                <button id="btn-house" class="build-btn" data-type="house">
+                    <span class="icon">🏠</span> Casa (-0.1s) (75g)
+                </button>
+                <button id="btn-close-menu">Cancelar</button>
+            </div>
+            <div id="game-over-screen" class="hidden">
+                <h1 id="winner-text">¡Victoria!</h1>
+                <button onclick="location.reload()">Jugar de Nuevo</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
